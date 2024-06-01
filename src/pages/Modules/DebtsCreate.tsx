@@ -54,7 +54,7 @@ const Debt = () => {
     for (let i = 0; i < installment; i++) {
       plan.push({
         paymentDate: paymentDate.toISOString().split("T")[0],
-        paymentAmount: amountWithInterest,
+        paymentAmount: amountWithInterest / installment,
       });
       paymentDate.setMonth(paymentDate.getMonth() + 1);
     }
