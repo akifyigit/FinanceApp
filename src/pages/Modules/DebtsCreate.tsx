@@ -58,7 +58,6 @@ const Debt = () => {
       });
       paymentDate.setMonth(paymentDate.getMonth() + 1);
     }
-    console.log(plan);
     setPaymentPlan(plan);
     setIsModalOpen(true);
   };

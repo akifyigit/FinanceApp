@@ -42,7 +42,6 @@ const Register: React.FC = () => {
       apiResHandler(
         Register({ data: registerForm }),
         (res: any) => {
-          console.log(res);
           localStorage.clear();
           localStorage.setItem("clientToken", res.data);
 

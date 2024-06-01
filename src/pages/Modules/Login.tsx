@@ -38,7 +38,6 @@ const Login: React.FC = () => {
     apiResHandler(
       login({ data: loginForm }),
       (res: any) => {
-        console.log(res);
         localStorage.clear();
         localStorage.setItem("clientToken", res.data);
 

@@ -25,11 +25,9 @@ const PaymentPlansTable: React.FC = () => {
     isError,
     refetch,
   } = useGetPaymentPlansByIdQuery({ id });
-  console.log(paymentPlans);
   const [updatePaymentPlan] = useUpdatePaymentPlansMutation();
 
   const handleUpdateStatus = (paymentPlanId: string) => {
-    console.log(paymentPlanId);
     const planToUpdate = paymentPlans.data.find(
       (plan: any) => plan.id === paymentPlanId
     );
