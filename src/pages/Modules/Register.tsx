@@ -46,7 +46,7 @@ const Register: React.FC = () => {
           localStorage.clear();
           localStorage.setItem("clientToken", res.data);
 
-          navigate("/app");
+          navigate("/dashboard");
           setAlertInfo({
             show: true,
             status: `success`,
@@ -58,7 +58,7 @@ const Register: React.FC = () => {
           setAlertInfo({
             show: true,
             status: `error`,
-            message: "Kayıt Başarısız.Lütfen tekrar deneyin",
+            message: `Kayıt Başarısız.Lütfen tekrar deneyin.Hata Sebebi:${error.message}`,
           });
         }
       );

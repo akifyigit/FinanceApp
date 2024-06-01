@@ -29,18 +29,21 @@ export const debtsApi = createApi({
       query: () => ({
         method: "GET",
         path: "finance/debt",
+        providesTags: ["debts"],
       }),
     }),
     getDebtsById: builder.query({
       query: ({ id }) => ({
         method: "GET",
         path: `finance/debt/${id}`,
+        providesTags: ["debts"],
       }),
     }),
     getPaymentPlansById: builder.query({
       query: ({ id }) => ({
         method: "GET",
         path: `finance/payment-plans/${id}`,
+        providesTags: ["payments"],
       }),
     }),
     updatePaymentPlans: builder.mutation({
@@ -48,7 +51,6 @@ export const debtsApi = createApi({
         data,
         method: "PUT",
         path: `finance/payment-plans/${id}`,
-        providesTags: ["payments"],
       }),
     }),
   }),

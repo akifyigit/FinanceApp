@@ -96,7 +96,8 @@ const Debt = () => {
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="grid grid-cols-1 gap-4 p-6 bg-white shadow-2xl rounded-lg">
-        {/* Form fields */}
+        <div className="w-full text-center text-xl font-bold ">Borç Ekle</div>
+
         <div className="flex flex-col items-center  ">
           <div className="flex flex-row items-center m-2">
             <label htmlFor="debtName" className="w-40 text-right mr-4">

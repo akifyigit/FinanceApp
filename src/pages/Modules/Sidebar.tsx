@@ -14,7 +14,7 @@ const Sidebar = () => {
     },
   ];
   return (
-    <div className="sticky z-50 top-0 hidden md:block bottom-0 lg:left-0 p-2 w-60 text-center h-80vh  bg-gray-600 ">
+    <div className="sticky z-50 top-0 hidden md:block bottom-0 lg:left-0 p-2 w-60 text-center h-80vh mt-10 mb-10 rounded-r-xl bg-gray-600 ">
       <div className="relative mt-6"></div>
       {subItems.map((item) => (
         <div key={item.route} className="mt-4">
