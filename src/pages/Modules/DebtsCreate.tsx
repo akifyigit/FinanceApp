@@ -218,7 +218,7 @@ const Debt = () => {
               !isFormValid && "opacity-50 cursor-not-allowed"
             }`}
             onClick={calculatePaymentPlan}
-            disabled={!isFormValid} // Disable the button if form is not valid
+            disabled={!isFormValid}
           >
             Ödeme Planını Aç
           </button>

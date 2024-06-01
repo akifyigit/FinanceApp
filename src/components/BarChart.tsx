@@ -40,7 +40,7 @@ const BarChart: React.FC<BarChartProps> = ({ labels, data }) => {
 
   return (
     <div className="w-full h-full">
-      <h2>Monthly Payments </h2>
+      <h2>Aylık Ödemeler </h2>
       <Bar data={chartData} options={options} />
     </div>
   );

@@ -20,7 +20,7 @@ const monthNames = [
 ];
 
 const getNextMonths = (numMonths: number) => {
-  const currentMonth = new Date().getMonth(); // 0-based index for months
+  const currentMonth = new Date().getMonth();
   return Array.from(
     { length: numMonths },
     (_, i) => monthNames[(currentMonth + i) % 12]
