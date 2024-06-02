@@ -67,7 +67,14 @@ const Debts = () => {
               X
             </button>
             <p>
-              <strong>Aktiflik:</strong> {debt.isActive ? "Evet" : "Hayır"}
+              <strong>Aktiflik:</strong> <strong>Aktiflik:</strong>
+              <i
+                className={
+                  debt.isActive
+                    ? "ml-2 fa-solid fa-circle-check "
+                    : "fa-solid fa-circle-xmark"
+                }
+              />
             </p>
             <p>
               <strong>Borcun Adı:</strong> {debt.debtName}

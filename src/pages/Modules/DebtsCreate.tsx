@@ -9,6 +9,7 @@ import Modal from "../../components/Modal";
 import { apiResHandler } from "../../utils/api";
 import Alert from "../../components/Alert";
 import { useCreateDebtMutation } from "../../redux/debts/debtsApi";
+import { useNavigate } from "react-router";
 
 interface PaymentPlan {
   paymentDate: string;
@@ -17,6 +18,7 @@ interface PaymentPlan {
 
 const Debt = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [createDebt] = useCreateDebtMutation();
   const debtInfo = useSelector(debtInfoSelector);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -211,16 +213,25 @@ const Debt = () => {
               value={debtInfo.description}
             />
           </div>
-          <button
-            type="button"
-            className={`bg-green-500 text-white p-2 rounded mt-4 ${
-              !isFormValid && "opacity-50 cursor-not-allowed"
-            }`}
-            onClick={calculatePaymentPlan}
-            disabled={!isFormValid}
-          >
-            Ödeme Planını Aç
-          </button>
+          <div>
+            <button
+              type="button"
+              className={`bg-red-500 text-white p-2 rounded mt-4 mr-4`}
+              onClick={() => navigate("/debts")}
+            >
+              Vazgeç
+            </button>
+            <button
+              type="button"
+              className={`bg-green-500 text-white p-2 rounded mt-4 ml-4${
+                !isFormValid && "opacity-50 cursor-not-allowed"
+              }`}
+              onClick={calculatePaymentPlan}
+              disabled={!isFormValid}
+            >
+              Ödeme Planını Aç
+            </button>
+          </div>
         </div>
       </div>
 

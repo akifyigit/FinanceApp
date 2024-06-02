@@ -229,16 +229,25 @@ const DebtsUpdate = () => {
               value={debtInfo.description}
             />
           </div>
-          <button
-            type="button"
-            className={`bg-green-500 text-white p-2 rounded mt-4 ${
-              !isFormValid && "opacity-50 cursor-not-allowed"
-            }`}
-            onClick={calculatePaymentPlan}
-            disabled={!isFormValid}
-          >
-            Ödeme Planını Aç
-          </button>
+          <div>
+            <button
+              type="button"
+              className={`bg-red-500 text-white p-2 rounded mt-4 mr-4`}
+              onClick={() => navigate("/debts")}
+            >
+              Vazgeç
+            </button>
+            <button
+              type="button"
+              className={`bg-green-500 text-white p-2 rounded mt-4 ml-4${
+                !isFormValid && "opacity-50 cursor-not-allowed"
+              }`}
+              onClick={calculatePaymentPlan}
+              disabled={!isFormValid}
+            >
+              Ödeme Planını Aç
+            </button>
+          </div>
         </div>
       </div>
 
