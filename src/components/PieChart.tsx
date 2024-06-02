@@ -22,7 +22,7 @@ const PieChart: React.FC<PieChartProps> = ({ labels, data }) => {
   };
 
   return (
-    <div className="w-full h-full">
+    <div className="w-fit  h-fit m-8">
       <Pie data={chartData} />
     </div>
   );
